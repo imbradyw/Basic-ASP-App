@@ -1,0 +1,79 @@
+﻿@model IEnumerable<_200223057A1.Models.VideoGame>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Developer.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Publisher.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Review.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MinimumRequirements)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genres)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Developer.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Publisher.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Review.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MinimumRequirements)
+        </td>
+        <td>
+            @foreach(var genre in item.Genres)
+            {
+                @genre.Name
+                @Html.Raw(", ")
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.VideoGameId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.VideoGameId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.VideoGameId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="VideoGameContext-Web.config Connection String" description="VideoGameContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=VideoGameContext-20190121171710; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|VideoGameContext-20190121171710.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Brady\\Documents\\Georgian\ Semester\ 3\\COMP2089\ -\ Server\ Side\ Scripting\ ASP\.NET\\200223057A1\\200223057A1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='VideoGameContext']/@connectionString" />
+  </parameter>
+</parameters>
